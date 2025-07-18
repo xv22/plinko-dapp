@@ -4,25 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Plinko Dapp</title>
-
-  <!-- Подключение CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <h1>🟣 Plinko Web3</h1>
+    <p class="neon-subtitle">СукСяпук Геймз</p>
 
-    <!-- Игровое поле -->
-    <canvas id="plinkoBoard" width="400" height="600"></canvas>
+    <div class="plinko-wrapper">
+      <canvas id="plinkoBoard" width="400" height="600"></canvas>
+      <div id="slotLabels"></div>
+    </div>
 
-    <!-- Кнопка запуска шарика -->
     <button onclick="dropBall()">Запустить шарик</button>
   </div>
-  <!-- подключаем matter -->  
-  <script src="https://cdn.jsdelivr.net/npm/matter-js@0.19.0/build/matter.min.js"></script>
 
-  <!-- Подключение JS -->
+  <script src="https://cdn.jsdelivr.net/npm/matter-js@0.19.0/build/matter.min.js"></script>
   <script src="script.js"></script>
 </body>
-
 </html>

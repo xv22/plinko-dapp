@@ -28,6 +28,10 @@ let pins = [];
 
 // Генерация слотов
 function generateSlots() {
+  slots = [];
+  const labelsContainer = document.getElementById("slotLabels");
+  labelsContainer.innerHTML = "";
+
   for (let i = 0; i < slotCount; i++) {
     let x = i * slotWidth + slotWidth / 2;
     let y = canvas.height - slotHeight / 2;
@@ -41,6 +45,11 @@ function generateSlots() {
     });
     wall.label = `slot_${i}`;
     slots.push(wall);
+
+    // Добавляем HTML-лейбл
+    const label = document.createElement("span");
+    label.textContent = `x${slotMultipliers[i]}`;
+    labelsContainer.appendChild(label);
   }
 
   // Боковые стены
